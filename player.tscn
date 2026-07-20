@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://r60xn88p0x1m"]
+
+[ext_resource type="Texture2D" uid="uid://ctt17s0w67bs2" path="res://raoul.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://pirxq2a8yr6p" path="res://player.gd" id="1_onrkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ex1gc"]
+size = Vector2(14, 14)
+
+[node name="raoul" type="CharacterBody2D" unique_id=36156203]
+script = ExtResource("1_onrkg")
+SPEED = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1927087294]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_ex1gc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2060903506]
+texture_filter = 1
+texture = ExtResource("1_4flbx")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=638087201]

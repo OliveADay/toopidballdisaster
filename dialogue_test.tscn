@@ -1,0 +1,13 @@
+[gd_scene format=4 uid="uid://8rwonmj2r2xs"]
+
+[ext_resource type="TileSet" uid="uid://ble1n1l460j0j" path="res://base_tiles.tres" id="2_ac5y5"]
+[ext_resource type="PackedScene" uid="uid://r60xn88p0x1m" path="res://player.tscn" id="3_b8qgt"]
+
+[node name="dialogue_test" type="Node2D" unique_id=2060484851]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=302182315]
+tile_map_data = PackedByteArray("AAAAABgAAAAAAAAAAAABABgAAAAAAAAAAAACABgAAAAAAAAAAAADABgAAAAAAAAAAAAEABgAAAAAAAAAAAAFABgAAAAAAAAAAAAGABgAAAAAAAAAAAAHABgAAAAAAAAAAAAIABgAAAAAAAAAAAAJABgAAAAAAAAAAAAKABgAAAAAAAAAAAALABgAAAAAAAAAAAAMABgAAAAAAAAAAAANABgAAAAAAAAAAAAOABgAAAAAAAAAAAAPABgAAAAAAAAAAAAQABgAAAAAAAAAAAARABgAAAAAAAAAAAASABgAAAAAAAAAAAATABgAAAAAAAAAAAAUABgAAAAAAAAAAAA=")
+tile_set = ExtResource("2_ac5y5")
+
+[node name="raoul" parent="." unique_id=36156203 instance=ExtResource("3_b8qgt")]
+position = Vector2(54, 87)
