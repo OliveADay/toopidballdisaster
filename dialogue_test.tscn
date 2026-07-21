@@ -1,13 +1,49 @@
 [gd_scene format=4 uid="uid://8rwonmj2r2xs"]
 
 [ext_resource type="TileSet" uid="uid://ble1n1l460j0j" path="res://base_tiles.tres" id="2_ac5y5"]
+[ext_resource type="Texture2D" uid="uid://ct7s2uautulkl" path="res://samir.png" id="3_ac5y5"]
 [ext_resource type="PackedScene" uid="uid://r60xn88p0x1m" path="res://player.tscn" id="3_b8qgt"]
+[ext_resource type="Theme" uid="uid://xkc4bkw66e8c" path="res://main.tres" id="4_b8qgt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ao1p"]
+size = Vector2(54, 32)
 
 [node name="dialogue_test" type="Node2D" unique_id=2060484851]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=302182315]
+texture_filter = 1
 tile_map_data = PackedByteArray("AAAAABgAAAAAAAAAAAABABgAAAAAAAAAAAACABgAAAAAAAAAAAADABgAAAAAAAAAAAAEABgAAAAAAAAAAAAFABgAAAAAAAAAAAAGABgAAAAAAAAAAAAHABgAAAAAAAAAAAAIABgAAAAAAAAAAAAJABgAAAAAAAAAAAAKABgAAAAAAAAAAAALABgAAAAAAAAAAAAMABgAAAAAAAAAAAANABgAAAAAAAAAAAAOABgAAAAAAAAAAAAPABgAAAAAAAAAAAAQABgAAAAAAAAAAAARABgAAAAAAAAAAAASABgAAAAAAAAAAAATABgAAAAAAAAAAAAUABgAAAAAAAAAAAA=")
 tile_set = ExtResource("2_ac5y5")
 
 [node name="raoul" parent="." unique_id=36156203 instance=ExtResource("3_b8qgt")]
 position = Vector2(54, 87)
+
+[node name="samir" type="Area2D" parent="." unique_id=459164885]
+position = Vector2(293, 375)
+
+[node name="Sprite2D" type="Sprite2D" parent="samir" unique_id=168365062]
+texture_filter = 1
+texture = ExtResource("3_ac5y5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="samir" unique_id=1302173459]
+position = Vector2(4, -7)
+shape = SubResource("RectangleShape2D_4ao1p")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="samir" unique_id=251277861]
+
+[node name="ColorRect" type="ColorRect" parent="samir/CanvasLayer" unique_id=800740964]
+offset_top = 212.0
+offset_right = 40.403652
+offset_bottom = 240.33807
+scale = Vector2(15.840152, 5.2226553)
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="samir/CanvasLayer" unique_id=1267411484]
+texture_filter = 1
+offset_left = 9.0
+offset_top = 218.0
+offset_right = 635.0
+offset_bottom = 356.0
+theme = ExtResource("4_b8qgt")
+text = "ok wait so what if we talk like this instead of whatever we were doing before this, oh idk maybe we expriment a little, see what works and such"
+autowrap_mode = 2
